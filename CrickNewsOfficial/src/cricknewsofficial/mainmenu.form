@@ -16,16 +16,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usersActionPerformed"/>
           </Events>
-          <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="signup">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="User Sign Up"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="signupActionPerformed"/>
-              </Events>
-            </MenuItem>
-          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="matchschedules">
           <Properties>
