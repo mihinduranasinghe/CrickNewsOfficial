@@ -5,6 +5,7 @@
  */
 package cricknewsofficial;
 
+import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -39,12 +40,19 @@ public class matchdetails extends javax.swing.JFrame {
         
         try{
            // Class.forName("com.mysql.jdbc.Driver");
+             String matchid;
+             matchid=txtMatchid.getText();
+             //matchid=request.getParameter("txtMatchid");\
+           
             String dbpath="jdbc:mysql://localhost:3308/cricknews";
             con=DriverManager.getConnection(dbpath,"root","");
             String sql2="select * from match_schedule";
-             String sql="select won_the_toss_by,won_the_toss_and_elected_to_,first_batted_coutry,inning01_score_and_wickets,inning01_overs,inning01_extras from match_summery where match_id=1";
-             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id=1";
-             String sql4="select match_won_by from match_summery where match_id=1";
+             String sql="select won_the_toss_by,won_the_toss_and_elected_to_,first_batted_coutry,inning01_score_and_wickets,inning01_overs,inning01_extras from match_summery where match_id='"+matchid+"'";
+             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id='"+matchid+"'";
+             String sql4="select match_won_by from match_summery where match_id='"+matchid+"'";
+             
+            
+             
             pst=con.prepareStatement(sql);
             pst2=con.prepareStatement(sql2);
             pst3=con.prepareStatement(sql3);
@@ -90,7 +98,7 @@ public class matchdetails extends javax.swing.JFrame {
         jTable3 = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
+        txtMatchid = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -141,6 +149,11 @@ public class matchdetails extends javax.swing.JFrame {
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 120, -1));
 
         jButton3.setText("Score Card-Batting");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 130, -1));
 
         jButton4.setText("Score Card-Bowling");
@@ -199,10 +212,10 @@ public class matchdetails extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 280, 50));
 
-        jTextField1.setText("Match ID");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField1.setOpaque(false);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 180, 30));
+        txtMatchid.setText("Match ID");
+        txtMatchid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMatchid.setOpaque(false);
+        jPanel1.add(txtMatchid, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 180, 30));
 
         jButton6.setText("Search Match");
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, -1, 30));
@@ -233,6 +246,7 @@ public class matchdetails extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
         showtabledata();
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -240,6 +254,10 @@ public class matchdetails extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,6 +314,6 @@ public class matchdetails extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtMatchid;
     // End of variables declaration//GEN-END:variables
 }

@@ -171,6 +171,7 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
              String username,password;
         
+        //username=txtuname.getText();
         username=txtuname.getText();
         password=String.valueOf(txtpwd.getPassword());
         
