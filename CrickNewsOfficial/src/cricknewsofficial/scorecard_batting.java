@@ -5,7 +5,6 @@
  */
 package cricknewsofficial;
 
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -18,23 +17,17 @@ import net.proteanit.sql.DbUtils;
  *
  * @author Mihindu Ranasinghe
  */
-
-public class matchdetails extends javax.swing.JFrame {
-     Connection con=null;
-    PreparedStatement pst,pst2,pst3,pst4 = null;
-    ResultSet rs,rs2,rs3,rs4=null;
-  
-    
+public class scorecard_batting extends javax.swing.JFrame {
+ Connection con=null;
+    PreparedStatement pst,pst2= null;
+    ResultSet rs,rs2=null;
     /**
-     * Creates new form showteaminf
+     * Creates new form scorecard_batting
      */
-    public matchdetails() {
+    public scorecard_batting() {
         initComponents();
-        
     }
-
-    
-    public void showtabledata(){
+ public void showtabledata(){
         
         
         
@@ -55,24 +48,18 @@ public class matchdetails extends javax.swing.JFrame {
              
             pst=con.prepareStatement(sql);
             pst2=con.prepareStatement(sql2);
-            pst3=con.prepareStatement(sql3);
-            pst4=con.prepareStatement(sql4);
+            
             rs=pst.executeQuery();
             rs2=pst2.executeQuery();
-            rs3=pst3.executeQuery();
-            rs4=pst4.executeQuery();
+            
             jTable1.setModel(DbUtils.resultSetToTableModel(rs));
             jTable2.setModel(DbUtils.resultSetToTableModel(rs2));
-            jTable3.setModel(DbUtils.resultSetToTableModel(rs3));
-            jTable4.setModel(DbUtils.resultSetToTableModel(rs4));
             
             
         }
     catch(SQLException e1){
            JOptionPane.showConfirmDialog(null, e1);
         }
-    
-    }        
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -88,17 +75,8 @@ public class matchdetails extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        txtMatchid = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,7 +104,7 @@ public class matchdetails extends javax.swing.JFrame {
         jTable1.setOpaque(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 970, 50));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 490, 50));
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -138,33 +116,6 @@ public class matchdetails extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\stick-cricket-icon.png")); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, 110));
-
-        jButton2.setText("Match Summery");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 120, -1));
-
-        jButton3.setText("Score Card-Batting");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 160, -1));
-
-        jButton4.setText("Score Card-Bowling");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 140, -1));
-
-        jButton5.setText("Upcomming Matches");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 240, 140, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -179,42 +130,7 @@ public class matchdetails extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 287, -1, 50));
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable3);
-
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 970, 50));
-
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane4.setViewportView(jTable4);
-
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 280, 50));
-
-        txtMatchid.setText("Enter a match ID");
-        txtMatchid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtMatchid.setOpaque(false);
-        jPanel1.add(txtMatchid, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 180, 30));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\ground.jpeg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1010, 630));
@@ -240,21 +156,6 @@ public class matchdetails extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        
-        showtabledata();
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -272,43 +173,33 @@ public class matchdetails extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(matchdetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(scorecard_batting.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(matchdetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(scorecard_batting.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(matchdetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(scorecard_batting.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(matchdetails.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(scorecard_batting.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new matchdetails().setVisible(true);
+                new scorecard_batting().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTextField txtMatchid;
     // End of variables declaration//GEN-END:variables
 }
