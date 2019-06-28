@@ -13,7 +13,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import java.awt.*;
 import net.proteanit.sql.DbUtils;
-public class homemenu extends javax.swing.JFrame {
+public class showteaminfo extends javax.swing.JFrame {
 
     Connection con=null;
     PreparedStatement pst = null;
@@ -23,7 +23,7 @@ public class homemenu extends javax.swing.JFrame {
     /**
      * Creates new form mainmenu
      */
-    public homemenu() {
+    public showteaminfo() {
         initComponents();
         showtabledata();
     }
@@ -102,11 +102,6 @@ public class homemenu extends javax.swing.JFrame {
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 280, -1));
 
         jButton4.setText("Match Details");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 280, -1));
 
         jButton5.setText("Standings");
@@ -166,20 +161,8 @@ public class homemenu extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        showteaminf showtinfo = new showteaminf();
-        showtinfo.setVisible(true);
-        dispose();
         
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:\
-        matchdetails matchd=new matchdetails();
-        matchd.setVisible(true);
-        dispose();
-        
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
     public void showtabledata(){
         
         
@@ -221,14 +204,18 @@ public class homemenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(homemenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(showteaminfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(homemenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(showteaminfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(homemenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(showteaminfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(homemenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(showteaminfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -238,7 +225,7 @@ public class homemenu extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new homemenu().setVisible(true);
+                new showteaminfo().setVisible(true);
                 
             }
         });

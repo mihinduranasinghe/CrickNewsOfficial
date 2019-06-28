@@ -193,8 +193,8 @@ public class login extends javax.swing.JFrame {
              if(uname.equals(username)) {
                 if (pswd.equals(password)) {
                     h=0;             
-                    mainmenu mm=new mainmenu();
-                    mm.setVisible(true);
+                    homemenu hm=new homemenu();
+                    hm.setVisible(true);
                     dispose();
                     
              }
