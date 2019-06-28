@@ -42,7 +42,7 @@ public class scorecard_batting extends javax.swing.JFrame {
             String dbpath="jdbc:mysql://localhost:3308/cricknews";
             con=DriverManager.getConnection(dbpath,"root","");
              String sql1="select team_name,player_id,runs,balls_faced,fours,sixes from match_score_card where match_id='"+matchid+"'";
-             String sql2="select team_name,player_id,runs,balls_faced,fours,sixes from match_score_card where match_id='"+matchid+"'";
+             String sql2="select team_name,player_id,bowled_overs,runs_given,wickets_taken,cathes from match_score_card where match_id='"+matchid+"'";
 //             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id='"+matchid+"'";
 //             String sql4="select match_won_by from match_summery where match_id='"+matchid+"'";
 //             
@@ -156,8 +156,8 @@ public class scorecard_batting extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        homemenu home=new homemenu();
-        home.setVisible(true);
+        matchdetails md=new matchdetails();
+        md.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

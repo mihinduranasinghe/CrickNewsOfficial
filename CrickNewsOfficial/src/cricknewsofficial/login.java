@@ -178,7 +178,7 @@ public class login extends javax.swing.JFrame {
         DbConnection db=new DbConnection();
         Connection cn=db.createScreen();
         
-        ;
+        
        int h=0;
         try{
             Statement st=cn.createStatement();
