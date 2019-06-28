@@ -95,6 +95,11 @@ public class homemenu extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 280, 30));
 
         jButton2.setText("LOG OUT");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 500, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\ground.jpeg")); // NOI18N
@@ -172,6 +177,10 @@ public class homemenu extends javax.swing.JFrame {
         showmatchid.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
     public void showtabledata(){
         
         
@@ -183,7 +192,7 @@ public class homemenu extends javax.swing.JFrame {
              String sql="select * from match_schedule";
             pst=con.prepareStatement(sql);
             rs=pst.executeQuery();
-            jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+           
             
             
         }
