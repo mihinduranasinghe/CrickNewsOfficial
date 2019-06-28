@@ -214,6 +214,11 @@ public class matchdetails extends javax.swing.JFrame {
         txtMatchid.setText("Enter a match ID");
         txtMatchid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtMatchid.setOpaque(false);
+        txtMatchid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMatchidActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtMatchid, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 180, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\ground.jpeg")); // NOI18N
@@ -254,6 +259,10 @@ public class matchdetails extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtMatchidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMatchidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMatchidActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,6 +318,6 @@ public class matchdetails extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
-    private javax.swing.JTextField txtMatchid;
+    public static javax.swing.JTextField txtMatchid;
     // End of variables declaration//GEN-END:variables
 }
