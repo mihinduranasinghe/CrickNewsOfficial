@@ -42,7 +42,7 @@ public class scorecard_batting extends javax.swing.JFrame {
             String dbpath="jdbc:mysql://localhost:3308/cricknews";
             con=DriverManager.getConnection(dbpath,"root","");
              String sql1="select team_name,player_id,runs,balls_faced,fours,sixes from match_score_card where match_id='"+matchid+"'";
-             String sql2="select team_name,player_id,bowled_overs,runs_given,wickets_taken,cathes from match_score_card where match_id='"+matchid+"'";
+             String sql2="select team_name,player_id,bowled_overs,runs_given,wickets_taken,catches from match_score_card where match_id='"+matchid+"'";
 //             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id='"+matchid+"'";
 //             String sql4="select match_won_by from match_summery where match_id='"+matchid+"'";
 //             
@@ -81,6 +81,8 @@ public class scorecard_batting extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         lblMatchid = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -136,6 +138,12 @@ public class scorecard_batting extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, 330));
         jPanel1.add(lblMatchid, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, -1, -1));
+
+        jLabel4.setText("Score Card Of Batting");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
+
+        jLabel5.setText("Score Card Of Bowling");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\ground.jpeg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1010, 630));
@@ -201,6 +209,8 @@ public class scorecard_batting extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
