@@ -78,7 +78,7 @@ public class homemenu extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 280, 30));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 280, 30));
 
         jButton5.setText("Standings");
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 403, 280, 30));
