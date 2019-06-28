@@ -5,13 +5,9 @@
  */
 package cricknewsofficial;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
+import java.sql.*;
 import net.proteanit.sql.DbUtils;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,6 +22,8 @@ public class scorecard_batting extends javax.swing.JFrame {
      */
     public scorecard_batting() {
         initComponents();
+        showtabledata();
+         
     }
  public void showtabledata(){
         
@@ -33,20 +31,24 @@ public class scorecard_batting extends javax.swing.JFrame {
         
         try{
            // Class.forName("com.mysql.jdbc.Driver");
+           lblMatchid.setText(matchdetails.txtMatchid.getText());
+           
+           
+           
              String matchid;
-             matchid=txtMatchid.getText();
+             matchid=lblMatchid.getText();
              //matchid=request.getParameter("txtMatchid");\
            
             String dbpath="jdbc:mysql://localhost:3308/cricknews";
             con=DriverManager.getConnection(dbpath,"root","");
-             String sql2="select * from match_schedule where match_id='"+matchid+"'";
-             String sql="select won_the_toss_by,won_the_toss_and_elected_to_,first_batted_coutry,inning01_score_and_wickets,inning01_overs,inning01_extras from match_summery where match_id='"+matchid+"'";
-             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id='"+matchid+"'";
-             String sql4="select match_won_by from match_summery where match_id='"+matchid+"'";
-             
+             String sql1="select team_name,player_id,runs,balls_faced,fours,sixes from match_score_card where match_id='"+matchid+"'";
+             String sql2="select team_name,player_id,runs,balls_faced,fours,sixes from match_score_card where match_id='"+matchid+"'";
+//             String sql3="select chasing_country,inning02_score_and_wickets,inning02_overs,inning02_extras from match_summery where match_id='"+matchid+"'";
+//             String sql4="select match_won_by from match_summery where match_id='"+matchid+"'";
+//             
             
              
-            pst=con.prepareStatement(sql);
+            pst=con.prepareStatement(sql1);
             pst2=con.prepareStatement(sql2);
             
             rs=pst.executeQuery();
@@ -60,6 +62,7 @@ public class scorecard_batting extends javax.swing.JFrame {
     catch(SQLException e1){
            JOptionPane.showConfirmDialog(null, e1);
         }
+ }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,6 +80,7 @@ public class scorecard_batting extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        lblMatchid = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,7 +108,7 @@ public class scorecard_batting extends javax.swing.JFrame {
         jTable1.setOpaque(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 490, 50));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 490, 330));
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +134,8 @@ public class scorecard_batting extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 50));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, -1, 330));
+        jPanel1.add(lblMatchid, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mihindu Ranasinghe\\Desktop\\ground.jpeg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1010, 630));
@@ -201,5 +206,6 @@ public class scorecard_batting extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JLabel lblMatchid;
     // End of variables declaration//GEN-END:variables
 }

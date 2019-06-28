@@ -258,6 +258,10 @@ public class matchdetails extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        scorecard_batting scorebat=new scorecard_batting();
+        scorebat.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void txtMatchidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMatchidActionPerformed
