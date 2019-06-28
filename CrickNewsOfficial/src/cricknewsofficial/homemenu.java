@@ -70,7 +70,7 @@ public class homemenu extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 280, 30));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 280, 30));
 
         jButton4.setText("Match Details");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class homemenu extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 343, 280, 30));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 280, 30));
 
         jButton5.setText("Standings");
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 403, 280, 30));
@@ -180,6 +180,9 @@ public class homemenu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        login lg=new login();
+        lg.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
     public void showtabledata(){
         
