@@ -145,7 +145,7 @@ public class matchdetails extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 120, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 120, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 0, 102));
         jButton3.setText("Score Card-Batting&Bowling");
@@ -154,7 +154,7 @@ public class matchdetails extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 320, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 320, -1));
 
         jButton5.setBackground(new java.awt.Color(255, 0, 102));
         jButton5.setText("Upcomming Matches");
