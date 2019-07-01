@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cricknewsofficial_V2.Repository;
+package cricknewsofficial_V2.DatabaseClass;
 
-import cricknewsofficial_V2.DatabaseClass.Data;
+import java.util.HashMap;
 
 /**
  *
  * @author Mihindu Ranasinghe
  */
-public interface Repository {
-    Data get();
-   
+public interface Data {
+    public HashMap get();
+    
+    
 }

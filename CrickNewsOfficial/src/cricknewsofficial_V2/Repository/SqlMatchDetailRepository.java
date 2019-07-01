@@ -5,7 +5,7 @@
  */
 package cricknewsofficial_V2.Repository;
 
-import static cricknewsofficial_V2.Cricknews.matchdetailsView.txtMatchid;
+import static cricknewsofficial_V2.CricknewsView.matchdetailsView.txtMatchid;
 import cricknewsofficial_V2.DatabaseClass.MatchSchedule;
 import cricknewsofficial_V2.DatabaseClass.MatchSummary;
 import cricknewsofficial_V2.db_connectivity.DbConnection;
@@ -22,7 +22,7 @@ import net.proteanit.sql.DbUtils;
  *
  * @author Mihindu Ranasinghe
  */
-public class SqlMatchDetailRepository implements Repository{
+public class SqlMatchDetailRepository{
     PreparedStatement pst,pst2,pst3,pst4 = null;
     ResultSet rs,rs2,rs3,rs4=null;
     String matchid;
@@ -75,12 +75,7 @@ public class SqlMatchDetailRepository implements Repository{
             
             
            
-            
-//            jTable1.setModel(DbUtils.resultSetToTableModel(rs));
-//            jTable2.setModel(DbUtils.resultSetToTableModel(rs2));
-//            jTable3.setModel(DbUtils.resultSetToTableModel(rs3));
-//            jTable4.setModel(DbUtils.resultSetToTableModel(rs4));
-            
+          
             
         }
     catch(SQLException e1){
@@ -89,9 +84,9 @@ public class SqlMatchDetailRepository implements Repository{
      return matchsummary;
     }   
 
-    @Override
+  
     public MatchSchedule get2() {
-                    MatchSchedule matchSchedule = new MatchSchedule();
+        MatchSchedule matchSchedule = new MatchSchedule();
         try {
 
             

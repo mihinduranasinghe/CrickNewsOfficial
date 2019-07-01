@@ -6,9 +6,14 @@
 package cricknewsofficial_V2.DatabaseClass;
     
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
     
 public class MatchSummary {
+    HashMap<String,ResultSet> data = new HashMap<>();
+    
     private ResultSet Innings1;
     private ResultSet Innings2;
     private ResultSet Winner;
@@ -19,6 +24,7 @@ public class MatchSummary {
 
     public void setInnings1(ResultSet Innings1) {
         this.Innings1 = Innings1;
+        
     }
 
     public ResultSet getInnings2() {
