@@ -5,10 +5,14 @@
  */
 package cricknewsofficial_V2.Repository;
 
+import cricknewsofficial_V2.DatabaseClass.MatchSchedule;
+import cricknewsofficial_V2.DatabaseClass.MatchSummary;
+
 /**
  *
  * @author Mihindu Ranasinghe
  */
 public interface Repository {
-    void showtabledata();
+    MatchSummary get();
+    MatchSchedule get2();
 }
