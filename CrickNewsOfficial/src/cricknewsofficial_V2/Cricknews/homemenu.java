@@ -162,7 +162,7 @@ public class homemenu extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:\
-        matchdetails matchd=new matchdetails();
+        matchdetailsView matchd=new matchdetailsView();
         matchd.setVisible(true);
         dispose();
         

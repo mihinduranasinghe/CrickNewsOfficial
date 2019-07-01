@@ -24,7 +24,7 @@ import net.proteanit.sql.DbUtils;
  * @author Mihindu Ranasinghe
  */
 
-public class matchdetails extends javax.swing.JFrame {
+public class matchdetailsView extends javax.swing.JFrame {
     
     
     
@@ -35,7 +35,7 @@ public class matchdetails extends javax.swing.JFrame {
     /**
      * Creates new form showteaminf
      */
-    public matchdetails() {
+    public matchdetailsView() {
         initComponents();
         
     }
@@ -261,7 +261,7 @@ public class matchdetails extends javax.swing.JFrame {
        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new matchdetails().setVisible(true);
+                new matchdetailsView().setVisible(true);
             }
         });
     }

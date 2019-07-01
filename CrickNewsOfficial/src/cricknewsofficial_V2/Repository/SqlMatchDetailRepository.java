@@ -5,7 +5,7 @@
  */
 package cricknewsofficial_V2.Repository;
 
-import static cricknewsofficial_V2.Cricknews.matchdetails.txtMatchid;
+import static cricknewsofficial_V2.Cricknews.matchdetailsView.txtMatchid;
 import cricknewsofficial_V2.DatabaseClass.MatchSchedule;
 import cricknewsofficial_V2.DatabaseClass.MatchSummary;
 import cricknewsofficial_V2.db_connectivity.DbConnection;

@@ -32,7 +32,7 @@ public class scorecard_batting extends javax.swing.JFrame {
         
         try{
            // Class.forName("com.mysql.jdbc.Driver");
-           lblMatchid.setText(matchdetails.txtMatchid.getText());
+           lblMatchid.setText(matchdetailsView.txtMatchid.getText());
            
         DbConnection db=new DbConnection();
         Connection cn=db.createScreen();
@@ -165,7 +165,7 @@ public class scorecard_batting extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        matchdetails md=new matchdetails();
+        matchdetailsView md=new matchdetailsView();
         md.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
