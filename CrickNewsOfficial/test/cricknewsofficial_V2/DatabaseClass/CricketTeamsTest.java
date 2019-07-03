@@ -12,16 +12,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-
 
 /**
  *
  * @author Mihindu Ranasinghe
  */
-public class MatchScheduleTest {
+public class CricketTeamsTest {
     
-    public MatchScheduleTest() {
+    public CricketTeamsTest() {
     }
     
     @BeforeClass
@@ -41,32 +39,28 @@ public class MatchScheduleTest {
     }
 
     /**
-     * Test of getMatchSchedule method, of class MatchSchedule.
+     * Test of getCriketteams method, of class CricketTeams.
      */
     @Test
-    public void testGetMatchSchedule() {
-        System.out.println("getMatchSchedule");
-        MatchSchedule instance = new MatchSchedule();
-        ResultSet expResult = mock(ResultSet.class);
-        ResultSet result = instance.getMatchSchedule();
+    public void testGetCriketteams() {
+        System.out.println("getCriketteams");
+        CricketTeams instance = new CricketTeams();
+        ResultSet expResult = null;
+        ResultSet result = instance.getCriketteams();
         assertEquals(expResult, result);
-        
+       
     }
 
     /**
-     * Test of setMatchSchedule method, of class MatchSchedule.
+     * Test of setCriketteams method, of class CricketTeams.
      */
     @Test
-    public void testSetMatchSchedule() {
-        System.out.println("setMatchSchedule");
-        
-        final ResultSet resultSet = mock(ResultSet.class);
-        MatchSchedule instance = new MatchSchedule();
-        instance.setMatchSchedule(resultSet);
-        assertEquals(resultSet,instance.getMatchSchedule());
+    public void testSetCriketteams() {
+        System.out.println("setCriketteams");
+        ResultSet criketteams = null;
+        CricketTeams instance = new CricketTeams();
+        instance.setCriketteams(criketteams);
+       
     }
-
-
-   
     
 }
