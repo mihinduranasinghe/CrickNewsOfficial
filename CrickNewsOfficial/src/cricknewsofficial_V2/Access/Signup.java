@@ -5,6 +5,7 @@ package cricknewsofficial_V2.Access;
  *
  * @author Mihindu Ranasinghe
  */
+import cricknewsofficial_V2.Welcome;
 import cricknewsofficial_V2.db_connectivity.DbConnection;
 import java.sql.*;
 import javax.swing.JOptionPane;
@@ -42,6 +43,7 @@ public class Signup extends javax.swing.JFrame {
         txtCountry = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,7 +93,7 @@ public class Signup extends javax.swing.JFrame {
                 btnSignupActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, -1, -1));
+        jPanel2.add(btnSignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, -1, -1));
 
         LabelCountry.setBackground(new java.awt.Color(204, 204, 204));
         LabelCountry.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -127,6 +129,14 @@ public class Signup extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("Welcome to CrickNEWS Official ");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 710, -1));
+
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 450, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -193,6 +203,14 @@ public class Signup extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCountryActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Welcome welcome=new Welcome();
+        welcome.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -214,6 +232,7 @@ public class Signup extends javax.swing.JFrame {
     private javax.swing.JLabel LabelEmail;
     private javax.swing.JLabel LabelPass;
     private javax.swing.JButton btnSignup;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

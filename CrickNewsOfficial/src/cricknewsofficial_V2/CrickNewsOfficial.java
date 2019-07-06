@@ -5,8 +5,6 @@
  */
 package cricknewsofficial_V2;
 
-import cricknewsofficial_V2.CricknewsView.Welcome;
-
 /**
  *
  * @author Mihindu Ranasinghe

@@ -10,7 +10,7 @@ package cricknewsofficial_V2.Access;
  * @author Mihindu Ranasinghe
  */
 import cricknewsofficial_V2.db_connectivity.DbConnection;
-import cricknewsofficial_V2.CricknewsView.Welcome;
+import cricknewsofficial_V2.Welcome;
 import cricknewsofficial_V2.CricknewsView.homemenu;
 import java.sql.*;
 import javax.swing.JOptionPane;
